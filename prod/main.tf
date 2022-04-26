@@ -27,7 +27,7 @@ resource "aws_vpc" "vpcprod" {
 }
 
 resource "aws_subnet" "prod-subnet" {
-  vpc_id = aws_vpc.vpcprod
+  vpc_id = aws_vpc.vpcprod.id
   availability_zone = "us-west-2a"
   cidr_block = "11.0.0.0/24"
   map_public_ip_on_launch = true
@@ -37,7 +37,7 @@ resource "aws_subnet" "prod-subnet" {
 }
 
 resource "aws_internet_gateway" "gw" {
-  vpc_id = aws_vpc.vpcprod
+  vpc_id = aws_vpc.vpcprod.id
 
   tags = {
     Name = "prod-gw"
