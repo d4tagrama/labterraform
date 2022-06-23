@@ -58,7 +58,7 @@ resource "aws_autoscaling_group" "example" {
   launch_configuration = "${aws_launch_configuration.example.id}"
   min_size = 1
   max_size = 2
-  availability_zones = [ "${data.aws_launch_configuration.all.names}}" ]
+  availability_zones = ["us-east-1a", "us-east-1b"]
 
   tag  {
     key = "Name"
