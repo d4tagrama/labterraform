@@ -6,7 +6,9 @@ variable "server_port" {
   description = "The port the server will use for HTTP requestes"
   default = 8080
 }
-
+data "aws_availability_zone" "all" {
+  
+}
 output "public_ip" {
   value = "${aws_instance.example.public_ip}"
 }
