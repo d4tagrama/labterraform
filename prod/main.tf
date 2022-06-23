@@ -26,7 +26,7 @@ resource "aws_launch_configuration" "example" {
     create_before_destroy = true
   }
 }
-resource "aws_instance" "example" {
+/* resource "aws_instance" "example" {
   ami = "ami-40d28157"
   instance_type = "t2.micro"
   vpc_security_group_ids = [ "${aws_security_group.instance.id}" ]
@@ -40,7 +40,7 @@ resource "aws_instance" "example" {
     name = "terraform-example"
  } 
 }
-
+ */
 resource "aws_security_group" "instance" {
   name = "terraform-example-instance"
   ingress {
