@@ -9,9 +9,9 @@ variable "server_port" {
 /* data "aws_availability_zone" "all" {
   
 } */
-output "public_ip" {
+/* output "public_ip" {
   value = "${aws_instance.example.public_ip}"
-}
+} */
 
 resource "aws_launch_configuration" "example" {
   image_id = "ami-40d28157"
